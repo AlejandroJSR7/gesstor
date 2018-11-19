@@ -1,7 +1,7 @@
 /* ideep.css */
 * { box-sizing: border-box; }
 html, body { height: 100%; }
-body { background-color: slateblue; }
+body { background-color: rgb(221,20,21, 0.85); }
 .cfx:after { 
   clear: both;
   content: "";
@@ -237,7 +237,7 @@ body { background-color: slateblue; }
   width: 100%;
 }
 .search-bar-icon {
-  background-image: url('images/icons/icon-map.svg');
+  background-image: url('https://alejandrojsr7.github.io/gesstor/images/icons/icon-map.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
