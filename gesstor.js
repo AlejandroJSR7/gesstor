@@ -6,4 +6,10 @@ $( document ).ready(function() {
     $( ".header__main-nav" ).toggleClass( 'active-menu' );
     $( ".js-open-menu-btn" ).toggleClass( 'open-menu-btn-active' );
   });
+
+
+  $('.js-cube-item').click(function () {
+    alert("Click");
+  });
+
 });

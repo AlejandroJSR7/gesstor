@@ -1,7 +1,6 @@
 /* ideep.css */
 * { box-sizing: border-box; }
 html, body { height: 100%; }
-body { background-color: rgb(221,20,21, 0.85); }
 .cfx:after { 
   clear: both;
   content: "";
@@ -370,8 +369,54 @@ body { background-color: rgb(221,20,21, 0.85); }
   transform: rotate(45deg) translate(-8px, -8px);
 }
 
-
-
+/* Cube 3D */
+.cube {
+  border-radius: 10px;
+  height: 300px;
+  left: 50%;
+  margin: -200px 0 0 -50px;
+  position: relative;
+  top: 50%;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg) rotateY(40deg);
+  width: 300px;
+}
+[class^="cube__face"] {
+  height: 300px;
+  position: absolute;
+  width: 300px;
+  background-color: white;
+}
+.cube__face--top {
+  left: -155px;
+  transform: rotateX(90deg) translateZ(155px);
+}
+.cube__face--right { 
+  left: -155px;
+  transform: rotateY(0deg) translateZ(155px);
+}
+.cube__face--left { 
+  transform: rotateY(-90deg) translateZ(310px);
+}
+[class^="cube-item"] {
+  background-color: #f44336;
+  cursor: pointer;
+  display: block;
+  float: left;
+  height: calc(50% - 5px);
+  transition: all 0.5s ease;
+  width: calc(50% - 5px);
+}
+[class^="cube-item"]:hover {
+  background-color: #d50000;
+}
+[class^="cube-item"]:nth-child(odd) {
+  margin-right: 10px;
+}
+[class^="cube-item"]:nth-child(1n),
+[class^="cube-item"]:nth-child(2n) {
+  margin-bottom: 10px;
+}
 
 /* /// Optionals /// */
 
