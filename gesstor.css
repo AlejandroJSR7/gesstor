@@ -418,6 +418,19 @@ html, body { height: 100%; }
   margin-bottom: 10px;
 }
 
+.dock-menu--top {
+  bottom: initial;
+  top: 20px;
+}
+.dock-menu--top .dock-menu-list li:hover {
+  transform: translateY(20px);
+}
+
+/* Helpers */
+.d-none {
+  display: none;
+}
+
 /* /// Optionals /// */
 
   /* optional border to body */
