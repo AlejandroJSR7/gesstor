@@ -276,10 +276,10 @@ html, body { height: 100%; }
 }
 @media (min-width: 992px) {
   .search-bar {
-    left: 20px;
+    left: 70px;
     right: inherit;
     right: inherit;
-    top: 100px;
+    top: 25px;
   }
 }
 .search-bar input {
@@ -418,13 +418,15 @@ html, body { height: 100%; }
   margin-bottom: 10px;
 }
 
-.dock-menu--top {
-  bottom: initial;
-  top: 20px;
-}
-.dock-menu--top .dock-menu-list li:hover {
-  transform: translateY(20px);
-}
+.dock-menu--top { bottom: initial; top: 20px; }
+.dock-menu--top-right { bottom: initial; top: 20px; right: 20px; width: initial;}
+.dock-menu--top-right li { display: block; }
+.dock-menu--top-left { bottom: initial; top: 20px; left: 60px; width: initial;}
+.dock-menu--top .dock-menu-list li:hover { transform: translateY(20px); }
+
+.dock-menu--bottom-left { top: initial; bottom: 20px; left: 20px; width: initial;}
+.dock-menu--bottom-right { top: initial; bottom: 55px; right: 20px; width: initial;}
+.dock-menu--bottom-right li { display: block; }
 
 /* Helpers */
 .d-none {
