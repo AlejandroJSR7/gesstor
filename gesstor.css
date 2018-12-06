@@ -391,6 +391,9 @@ html, body { height: 100%; }
   left: -155px;
   transform: rotateX(90deg) translateZ(155px);
 }
+.cube__face--top .cube-item--03 {
+  background-image: url('images/giphy.gif');
+}
 .cube__face--right { 
   left: -155px;
   transform: rotateY(0deg) translateZ(155px);
@@ -400,11 +403,16 @@ html, body { height: 100%; }
 }
 [class^="cube-item"] {
   background-color: #f44336;
+  color: white;
   cursor: pointer;
   display: block;
   float: left;
+  font-size: 26px;
   height: calc(50% - 5px);
+  text-align: center;
+  text-decoration: none;
   transition: all 0.5s ease;
+  vertical-align: middle;
   width: calc(50% - 5px);
 }
 [class^="cube-item"]:hover {
