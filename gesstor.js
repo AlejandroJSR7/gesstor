@@ -21,6 +21,10 @@ $( document ).ready(function() {
   var open_close_cube = document.querySelector('.js-open-close-cube');
   var map_cube = document.querySelector('.map-cube')
 
+  var dock_menu_list_items = document.querySelectorAll('.dock-menu-list li');
+  var show_name__text = document.querySelector('.show-name__text');
+  var show_name = document.querySelector('.show-name');
+
   // Add event listeners
   item_make_toggle.addEventListener('click', function() {
     for (elm of items_make_hover) {
@@ -39,6 +43,13 @@ $( document ).ready(function() {
 
   open_close_cube.addEventListener('click', function() {
     map_cube.classList.toggle('map-cube-active');
+  });
+
+  dock_menu_list_items.forEach(function(elm) {
+    elm.addEventListener('mouseenter', function(e) {
+      var data_title = e.target.getAttribute("data-title");
+      show_name__text.innerText = data_title;
+    });
   });
 
 });

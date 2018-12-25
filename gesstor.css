@@ -271,11 +271,19 @@ html, body { height: 100%; }
 }
 /* Search Bar */
 .search-bar {
-  left: 60px;
+  left: 10px;
   position: fixed;
   right: 60px;
-  top: 10px;
+  top: 70px;
   z-index: 1001;
+  width: 75%;
+}
+@media (min-width: 762px) {
+  .search-bar {
+    left: 60px;
+    top: 10px;
+    width: inherit;
+  }
 }
 @media (min-width: 992px) {
   .search-bar {
@@ -446,7 +454,26 @@ html, body { height: 100%; }
 }
 
 .dock-menu--top { bottom: initial; top: 10px; }
-.dock-menu--top-right { bottom: initial; top: 10px; right: 10px; width: initial;}
+@media (min-width: 762px) {
+  .dock-menu--top { top: 10px; }
+}
+.dock-menu--top-right {
+  bottom: initial;
+  right: 10px;
+  top: 70px;
+  width: initial;
+}
+.dock-menu--top-right .dock-menu-list li {
+  display: block;
+}
+@media (min-width: 762px) {
+  .dock-menu--top-right {
+    top: 10px;
+  }
+  .dock-menu--top-right .dock-menu-list li {
+    display: inline-block;
+  }
+}
 .dock-menu--top-left { bottom: initial; top: 10px; left: 60px; width: initial;}
 .dock-menu--top .dock-menu-list li:hover { transform: translateY(20px); }
 
@@ -454,9 +481,11 @@ html, body { height: 100%; }
 .dock-menu--bottom-right { top: initial; bottom: 10px; right: 10px; width: initial;}
 .dock-menu--bottom-right li { display: block; }
 
-.dock-menu-list li.icon-big {
-  height: 60px;
-  width: 60px;
+@media (min-width: 762px) {
+  .dock-menu-list li.icon-big {
+    height: 60px;
+    width: 60px;
+  }
 }
 /* Helpers */
 .d-none {
@@ -503,6 +532,36 @@ li.item-make-toggle:hover {
 }
 .open-close-cube img {
   max-height: 100%;
+}
+
+.show-name {
+  background-color: rgb(221,20,21, 0.85);
+  border-radius: 5px;
+  bottom: 60px;
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+  left: 10px;
+  min-width: 100px;
+  padding: 5px 5px 5px 5px;
+  position: fixed;
+  text-align: center;
+  z-index: 1001;
+}
+@media (min-width: 762px) {
+  .show-name {
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.show-name__text {
+  background-color: #ffffff;
+  border-radius: 2px;
+  flex-basis: 100%;
+  font-size: 14px;
+  line-height: 1;
+  min-height: 20px;
+  padding: 4px 5px;
 }
 
 /* /// Optionals /// */
