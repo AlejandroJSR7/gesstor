@@ -25,6 +25,8 @@ $( document ).ready(function() {
   var show_name__text = document.querySelector('.show-name__text');
   var show_name = document.querySelector('.show-name');
 
+  var cube_faces = document.querySelectorAll('.cube__face a');
+
   // Add event listeners
   item_make_toggle.addEventListener('click', function() {
     for (elm of items_make_hover) {
@@ -51,5 +53,14 @@ $( document ).ready(function() {
       show_name__text.innerText = data_title;
     });
   });
+
+  cube_faces.forEach(function(elm) {
+    elm.addEventListener('mouseenter', function(e) {
+      var data_title = e.target.getAttribute("data-title");
+      show_name__text.innerText = data_title;
+    });
+  });
+
+  
 
 });
