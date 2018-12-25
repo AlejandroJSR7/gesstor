@@ -18,6 +18,9 @@ $( document ).ready(function() {
   var item_make_toggle = document.querySelector('.item-make-toggle');
   var items_make_hover = document.querySelectorAll(".item-make");
 
+  var open_close_cube = document.querySelector('.js-open-close-cube');
+  var map_cube = document.querySelector('.map-cube')
+
   // Add event listeners
   item_make_toggle.addEventListener('click', function() {
     for (elm of items_make_hover) {
@@ -32,6 +35,10 @@ $( document ).ready(function() {
     for (elm of items_make_hover) {
       elm.classList.remove('active');
     }
+  });
+
+  open_close_cube.addEventListener('click', function() {
+    map_cube.classList.toggle('map-cube-active');
   });
 
 });

@@ -375,6 +375,17 @@ html, body { height: 100%; }
 }
 
 /* Cube 3D */
+.map-cube {
+  height: 100%;
+  position: fixed;
+  right: 20px;
+  width: 50%;
+  z-index: 2000;
+  display: none;
+}
+.map-cube-active {
+  display: block;
+}
 .cube {
   border-radius: 10px;
   height: 300px;
@@ -383,31 +394,35 @@ html, body { height: 100%; }
   position: relative;
   top: 50%;
   transform-style: preserve-3d;
-  transform: rotateX(-30deg) rotateY(40deg);
+  transform: rotateX(-29deg) rotateY(42deg);
   width: 300px;
 }
 [class^="cube__face"] {
   height: 300px;
   position: absolute;
   width: 300px;
-  background-color: white;
 }
 .cube__face--top {
   left: -155px;
-  transform: rotateX(90deg) translateZ(155px);
+  transform: rotateX(90deg) translateZ(165px) translateY(14px) translateX(-10px);
 }
-.cube__face--top .cube-item--03 {
-  background-image: url('images/giphy.gif');
+.cube__face--top [class^="cube-item"] {
+  background-color: #706a6a;
 }
 .cube__face--right { 
-  left: -155px;
-  transform: rotateY(0deg) translateZ(155px);
+  left: -145px;
+  transform: rotateY(0deg) translateZ(140px);
+}
+.cube__face--right [class^="cube-item"] {
+  background-color: #989ca7;
 }
 .cube__face--left { 
-  transform: rotateY(-90deg) translateZ(310px);
+  transform: rotateY(-90deg) translateZ(310px) translateY(-12px) translateX(8px);
+}
+.cube__face--left [class^="cube-item"] {
+  background-color: #fefdf9;
 }
 [class^="cube-item"] {
-  background-color: #f44336;
   color: white;
   cursor: pointer;
   display: block;
@@ -417,11 +432,10 @@ html, body { height: 100%; }
   text-align: center;
   text-decoration: none;
   transition: all 0.5s ease;
-  vertical-align: middle;
   width: calc(50% - 5px);
 }
 [class^="cube-item"]:hover {
-  background-color: #d50000;
+  box-shadow: inset 0 0 100px 100px black;
 }
 [class^="cube-item"]:nth-child(odd) {
   margin-right: 10px;
@@ -475,6 +489,22 @@ li.item-make-toggle,
 li.item-make-toggle:hover {
   transform: none;
 }
+
+.open-close-cube {
+  cursor: pointer;
+  display: block;
+  height: 50px;
+  position: fixed;
+  right: 0;
+  text-align: right;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2000;
+}
+.open-close-cube img {
+  max-height: 100%;
+}
+
 /* /// Optionals /// */
 
   /* optional border to body */
