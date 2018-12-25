@@ -386,10 +386,10 @@ html, body { height: 100%; }
 .map-cube {
   height: 100%;
   position: fixed;
-  right: 20px;
+  right: 10px;
   width: 50%;
   z-index: 2000;
-  display: none;
+  display: block;
 }
 .map-cube-active {
   display: block;
@@ -402,7 +402,7 @@ html, body { height: 100%; }
   position: relative;
   top: 50%;
   transform-style: preserve-3d;
-  transform: rotateX(-29deg) rotateY(42deg);
+  transform: rotateX(-32deg) rotateY(43deg);
   width: 300px;
 }
 [class^="cube__face"] {
@@ -412,7 +412,7 @@ html, body { height: 100%; }
 }
 .cube__face--top {
   left: -155px;
-  transform: rotateX(90deg) translateZ(165px) translateY(14px) translateX(-10px);
+  transform: rotateX(90deg) translateZ(166px) translateY(14px) translateX(-10px);
 }
 .cube__face--top [class^="cube-item"] {
   background-color: #706a6a;
