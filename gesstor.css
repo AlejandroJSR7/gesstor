@@ -389,7 +389,7 @@ html, body { height: 100%; }
   right: 10px;
   width: 50%;
   z-index: 2000;
-  display: block;
+  display: none;
 }
 .map-cube-active {
   display: block;
